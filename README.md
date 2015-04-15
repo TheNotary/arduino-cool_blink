@@ -1,24 +1,25 @@
 ==Cool Blink==
 
-This is my first Arduino project.  The .ino file can be opened vio Aruino's official IDE and flashed to an Arduino Uno, but the clever way to deploy this code is with platformio which works on linux and can flash the Pro Trinket just fine.  
+This is my first Arduino project.  The .ino file can be opened vio Aruino's official IDE and flashed to an Arduino Uno, but the clever way to deploy this code is with platformio which works on linux and can flash the Pro Trinket just fine.  Look at all the [boards](http://docs.platformio.org/en/latest/platforms/atmelavr.html) to choose from!  
 
 ==Installing Platformio==
 
-Notes can be found at... http://docs.platformio.org/en/latest/quickstart.html
+Notes can be found at [platformio.org](http://docs.platformio.org/en/latest/quickstart.html)... 
 
     $  sudo python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 
 Then the project structure can be generated that will upload to the two board (uno and protrinket) via
 
+    $  mkdir /tmp/cool_blink && cd /tmp/cool_blink
     $  platformio init --board=protrinket5 --board=uno
 
-You'll have to specifically choose the 'yes' option as it builds the project structure.  
+That will make your project all set to deploy to protrinkets (5v) and Arduino Uno boards.  You'll have to specifically choose the 'yes' option as it builds the project structure.  
 
 Once that's done, you can drop your source code files into the 'src' directory and build your project with (the sudo is required until you grant your user access to )
 
     $  sudo platformio run
 
-Your deploy targets are specified in `platformio.ini`
+Your deploy targets are specified in `platformio.ini`, and platformio will automatically look to see if the devices are attached and try to flash to them.  
 
 Compilation artifacts and binaries can be found in the hidden folder `.pioenvs`
 
