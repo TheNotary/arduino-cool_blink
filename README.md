@@ -63,4 +63,12 @@ Btw, the dialout group automatically gets tty access, so you'll be able to uploa
 
 
 
+### Pro Trinket 5v Problem Solved
+
+If you don't use sudo and you try to flash a trinket or pro trinket 3v, you'll get the below error message.  
+
+    avrdude: error: usbtiny_transmit: error sending control message: Operation not permitted
+    avrdude: initialization failed, rc=-1
+    Double check connections and try again, or use -F to override
+    this check.
 
