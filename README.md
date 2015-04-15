@@ -2,7 +2,17 @@
 
 This is my first Arduino project.  The .ino file can be opened vio Aruino's official IDE and flashed to an Arduino Uno, but the clever way to deploy this code is with platformio which works on linux and can flash the Pro Trinket just fine.  Look at all the [boards](http://docs.platformio.org/en/latest/platforms/atmelavr.html) to choose from!  
 
-==Installing Platformio==
+##Deploy This Code in a Snap
+
+Require's platformio is setup
+
+    $  git clone https://github.com/TheNotary/cool_blink.git
+    $  cd cool_blink
+       # push bootloader button on the trinket
+    $  platformio run
+
+
+##Installing Platformio
 
 Notes can be found at [platformio.org](http://docs.platformio.org/en/latest/quickstart.html)... 
 
@@ -24,7 +34,7 @@ Your deploy targets are specified in `platformio.ini`, and platformio will autom
 Compilation artifacts and binaries can be found in the hidden folder `.pioenvs`
 
 
-==Removing need for sudo==
+##Removing need for sudo
 
 You don't need to do this part, but you can.  It's specific to Linux Mint, a debian based linux systems.
 
