@@ -8,6 +8,8 @@ void setup() {
 void loop() {
   blink("brief");
   delay(1000);
+  blink("brief");
+  delay(1000);
   blink("long");
   delay(1000);
 }
