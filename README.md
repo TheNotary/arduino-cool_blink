@@ -1,4 +1,4 @@
-==Cool Blink==
+##Cool Blink
 
 This is my first Arduino project.  The .ino file can be opened vio Aruino's official IDE and flashed to an Arduino Uno, but the clever way to deploy this code is with platformio which works on linux and can flash the Pro Trinket just fine.  Look at all the [boards](http://docs.platformio.org/en/latest/platforms/atmelavr.html) to choose from!  
 
